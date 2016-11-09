@@ -15,3 +15,5 @@
 /backupFiles
 /bin
 /LiveOdiaFinal.zip
+/App/Controllers/autoCompleteController.js
+/App/Views/autocomplete.html
