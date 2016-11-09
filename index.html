@@ -31,10 +31,12 @@
     <script src="js/angular-route.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-local-storage/0.2.2/angular-local-storage.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.16.4/lodash.js"></script>
+
     <!--<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script>
-    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-material/1.1.0-rc4/angular-material.min.js"></script>-->
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js"></script>-->
+
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-material/1.1.0-rc4/angular-material.min.js"></script>-->
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     
     <script type="text/javascript">
@@ -79,14 +81,6 @@
         ga('send', 'pageview');
 
     </script>
-
-<<<<<<< HEAD
-   
-   
-=======
-
-
->>>>>>> 2e130aaaacbae38d4d586d8d3adcf061a339edf9
 </head>
 <body ng-controller="indexController">
     <div id="fb-root"></div>
@@ -99,35 +93,6 @@
             fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));
     </script>
-
-    <!--<div id='fb-root'></div>
-    <script src='http://connect.facebook.net/en_US/all.js'></script>
-   
-    <script>
-
-        FB.init({ appId: "1802130976742327", status: true, cookie: true });
-
-      function postToFeed() {
-          debugger;
-        // calling the API ...
-        var obj = {
-          method: 'feed',
-          redirect_uri: 'http://www.liveodia.co.in',
-          link: 'http://www.liveodia.co.in',
-          picture: 'http://fbrell.com/f8.jpg',
-          name: 'Facebook Dialogs',
-          caption: 'Reference Documentation',
-          description: 'Using Dialogs to interact with people.'
-        };
-
-        function callback(response) {
-          document.getElementById('msg').innerHTML = "Post ID: " + response['post_id'];
-        }
-
-        FB.ui(obj, callback);
-      }
-
-    </script>-->
     <div id="preloader">
         <div id="status">&nbsp;</div>
     </div>
@@ -158,13 +123,6 @@
         </nav>
     </header>
     <section id="content">
-<<<<<<< HEAD
-       
-=======
-        <p><a onclick='postToFeed(); return false;'>Post to Feed</a></p>
-        <p id='msg'></p>
-
->>>>>>> 2e130aaaacbae38d4d586d8d3adcf061a339edf9
         <div ng-view=""></div>
     </section>
     <footer id="footer">
@@ -248,7 +206,6 @@
     <script src="js/nice-scroll.js"></script>
     <!--<script src="dist/min/main.min.js"></script>-->
     <script src="App/app.js"></script>
-    <script src="templates.js"></script>
 
     <!--Controllers-->
     <script src="App/Controllers/homeController.js"></script>
@@ -259,7 +216,6 @@
     <script src="App/Controllers/detailHotnewsController.js"></script>
     <script src="App/Controllers/hotnewsController.js"></script>
     <script src="App/Controllers/loginController.js"></script>
-    <!--<script src="App/Controllers/autoCompleteController.js"></script>-->
     <script src="App/Controllers/editNewsController.js"></script>
     <script src="App/Controllers/editTopNewsController.js"></script>
     <script src="App/Controllers/editDetailNewsController.js"></script>
@@ -270,11 +226,6 @@
     <script src="App/Directives/imageShowDirective.js"></script>
     <script src="App/Directives/imageUpload.js"></script>
     <script src="App/Directives/myTickerDirective.js"></script>
-    <!--<script src="App/Directives/autocomplete.js"></script>-->
-<<<<<<< HEAD
-=======
-    <script src="App/Directives/autoComplete.js"></script>
->>>>>>> 2e130aaaacbae38d4d586d8d3adcf061a339edf9
     <!--Services-->
     <script src="App/Services/imageUploadService.js"></script>
     <script src="App/Services/homeServiceFactory.js"></script>

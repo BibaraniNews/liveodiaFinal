@@ -10,8 +10,8 @@ var _isNotMobile = (function () {
     return !check;
 })();
 LiveOdiaApp.constant('mobileCheck', check);
-//LiveOdiaApp.constant('baseService', 'http://localhost:61348/');
-LiveOdiaApp.constant('baseService', 'http://localhost:19471/');
+LiveOdiaApp.constant('baseService', 'http://localhost:61348/');
+//LiveOdiaApp.constant('baseService', 'http://localhost:19471/');
 //LiveOdiaApp.constant('baseService', 'http://www.liveodia.co.in/');
 LiveOdiaApp.config(['$routeProvider', '$httpProvider', '$locationProvider', function ($routeProvider, $httpProvider, $locationProvider) {
     $httpProvider.defaults.headers.common = {};

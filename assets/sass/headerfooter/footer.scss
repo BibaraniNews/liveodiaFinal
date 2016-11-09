@@ -1,0 +1,50 @@
+﻿#footer {
+    float: left;
+    display: inline;
+    width: 100%;
+}
+
+.footer_top {
+    background-color: #333;
+    display: inline;
+    float: left;
+    width: 100%;
+    padding-bottom: 15px;
+}
+
+.footer_widget {
+    float: left;
+    display: inline;
+    width: 100%;
+}
+
+.footer_widget > h2 {
+    color: #ddd;
+    font-size: 19px;
+    font-weight: 400;
+    margin-bottom: 12px;
+    padding-bottom: 8px;
+    text-transform: none;
+}
+
+.footer_widget > h2:before {
+    content: "-";
+    display: inline-block;
+    padding-right: 5px;
+}
+.footer_widget .media a {
+    color: #9e9e9e;
+}
+
+.footer_widget .ppost_nav {
+    margin-top: 18px;
+}
+
+.footer_bottom {
+    background-color: #3b3b3b;
+    color: #fff;
+    display: inline;
+    float: left;
+    padding: 15px 0 5px;
+    width: 100%;
+}

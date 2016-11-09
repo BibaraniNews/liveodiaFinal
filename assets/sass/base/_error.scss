@@ -1,0 +1,70 @@
+﻿.error_page {
+    float: left;
+    display: inline;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+    .error_page img {
+        max-width: 100%;
+    }
+
+        .error_page img:hover {
+            opacity: 1;
+        }
+
+    .error_page p {
+        color: #979797;
+        font-size: 2em;
+        margin-top: 20px;
+    }
+
+    .error_page > a {
+        border: 1px solid #12a3df;
+        color: #979797;
+        display: inline-block;
+        font-size: 1em;
+        margin-top: 20px;
+        padding: 8px 13px;
+        line-height: 19px;
+        -webkit-transition: all 0.5s;
+        -mz-transition: all 0.5s;
+        -ms-transition: all 0.5s;
+        -o-transition: all 0.5s;
+        transition: all 0.5s;
+    }
+
+        .error_page > a:hover {
+            background-color: #12a3df;
+            color: #fff;
+        }
+
+.erropr_recentpost {
+    display: inline;
+    float: left;
+    margin-top: 30px;
+    padding: 0 8%;
+    width: 100%;
+}
+
+    .erropr_recentpost > h2 {
+        text-align: left;
+        margin-bottom: 20px;
+    }
+
+        .erropr_recentpost > h2:before {
+            content: "-";
+            display: inline-block;
+            padding-right: 5px;
+        }
+
+    .erropr_recentpost .ppost_nav li {
+        width: 32%;
+        text-align: left;
+        margin-right: 22px;
+    }
+
+        .erropr_recentpost .ppost_nav li:last-child {
+            margin-right: 0px;
+        }

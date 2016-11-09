@@ -66,6 +66,7 @@
             console.log('Modal dismissed at: ' + new Date() + " " + $scope.selected);
         });
     };
+
     $scope.getFullRnews = function (fnid) {
         homeServiceFactory.getFullRnews(fnid).then(function (newsData) {
             if (newsData) {
@@ -84,14 +85,13 @@
         });
     };
 
-<<<<<<< HEAD
     $scope.GetImpNewsById = function (inid, rid) {
         debugger;
         $scope.rid = rid;
         if ($scope.mobile) {
             $('html, body').animate({ scrollTop: $("#middle_content").offset().top - 100 }, 2000);
         }
-=======
+    }
     //$scope.asideState = {
     //    open: false
     //};
@@ -144,7 +144,6 @@
         }
 
         //$(window).scrollTop($('#middle_content').offset().top-100).fadeOut(1000);
->>>>>>> 2e130aaaacbae38d4d586d8d3adcf061a339edf9
         $window.ga('send', 'event', 'home', 'Get Imp News by Id');
         if (rid != 0 || rid != null) {
             homeServiceFactory.getRelatedNews(rid).then(function (rnews) {
@@ -168,7 +167,6 @@
         });
     };
 
-<<<<<<< HEAD
     $scope.DeleteImpNews = function (inid) {
         homeServiceFactory.DeleteImpNews(inid).then(function (res) {
             if (res) {
@@ -181,8 +179,7 @@
         });
     }
 
-=======
->>>>>>> 2e130aaaacbae38d4d586d8d3adcf061a339edf9
+
     $scope.getImpNews = function () {
         homeServiceFactory.getImpNews().then(function (newsData) {
             if (newsData) {
