@@ -74,8 +74,42 @@
 </script>
 
 <div class="container">
+    <div class="row row-margin-bottom">
+        <h2 class="featured_title header-font"> ନିଶ୍ଚୟ ପଢନ୍ତୁ</h2>
+        <div class="col-md-6 padding-left lib-item" data-category="view">
+            <div class="lib-panel">
+                <div class="row box-shadow">
+                    <div class="col-md-6">
+                        <img class="lib-img-show" ng-src="../UploadedImage/{{impnews[impnews.length-1].iimage}}">
+                    </div>
+                    <div class="col-md-6">
+                        <div class="lib-row lib-header">
+                            {{impnews[impnews.length-1].ititle}}
+                            <div class="lib-header-seperator"></div>
+                        </div>
+                        <div class="lib-row lib-desc">
+                            {{impnews[impnews.length-1].impnews}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 padding-right-left lib-item" data-category="ui">
+            <div class="lib-panel no-padding">
+                <div class="row box-shadow no-padding">
+                    <ul class="m-ul">
+                        <li class="m-li" ng-repeat="inews in impnews | orderBy : '-inid' | limitTo : 4">
+                            <b class="impnewsfont">{{inews.ititle}}</b>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
     <div class="row">
-        <div class="col-lg-12 col-md-12 col-sm-12">
+
+        <!--<div class="col-lg-12 col-md-12 col-sm-12">
             <div class="featured_slider">
                 <h2 class="featured_title header-font"> ନିଶ୍ଚୟ ପଢନ୍ତୁ</h2>
                 <div class="slick_slider" ng-repeat="inews in impnews | orderBy : '-inid' | limitTo : 8">
@@ -115,7 +149,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div>-->
         <div class="row">
             <div class="col-lg-3 col-md-3 col-sm-4">
                 <div class="left_sidebar">
@@ -211,7 +245,9 @@
                                 <figure class="featured_img"><a href="#"><img ng-src="../UploadedImage/{{news.himage}}" alt=""></a></figure>
                                 <article class="featured_article">
                                     -<h2 class="a
-                                    rticle_titile"><a class="odia-font" href="detailhotnews/{{news.hnid}};{{news.rid}}">{{news.htitle}}</a></h2>-->
+                                    rticle_titile">
+                                        <a class="odia-font" href="detailhotnews/{{news.hnid}};{{news.rid}}">{{news.htitle}}</a>
+                                    </h2>-->
                                     <h2 class="artic
                                     <h2 class="article_titile"><a class="odia-font" href="detailhotnews/ids={{news.hnid}};rid={{news.rid}}">{{news.htitle}}</a></h2>
                                     <h4 ng-show="news.hsub!=null" style="color:{{news.mycolor}}">{{news.hsub}}</h4>

@@ -14,10 +14,36 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
     /*local('font/aparaj.ttf');*/
 }
 
-.odia-font {
-    font-family: "Odia-font";
+.header-font {
+    text-shadow: -3px -1px 1px rgba(0,0,0,0.87);
+}
+
+.hotnews-summary {
+    text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0,0,0,.1), 0 0 5px rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,.3), 0 3px 5px rgba(0,0,0,.2), 0 5px 10px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,.2), 0 20px 20px rgba(0,0,0,.15);
+    font-size: 1.4em;
+    text-align: center;
+    margin-top: 0px;
+}
+
+.impnews-heading {
+    font-size: 1.9em;
+}
+
+.hotnews-heading {
     font-size: 1.2em;
     font-weight: bold;
+}
+
+.newstory-heading {
+    font-size: 1.7em;
+    font-weight: 600;
+}
+
+.odia-font {
+    font-family: "Odia-font";
+    font-size: 1.3em;
+    font-weight: 500;
+    text-align: justify;
 }
 
 .impnewsfont {
@@ -457,7 +483,7 @@ figure.effect-lily a:hover img {
 }
 
 .catg_title {
-    font-size: 17px;
+    font-size: 16px;
 }
 
 .ppost_nav li .media-left {
@@ -603,10 +629,11 @@ figure.effect-lily a:hover img {
 
 .article_titile {
     float: left;
-    font-size: 26px;
-    line-height: 1.5em;
+    font-size: 30px;
+    line-height: 1.2em;
     margin-top: 11px;
     width: 100%;
+    font-weight: 600;
 }
 
 .pagination > li:first-child > a, .pagination > li:first-child > span {
@@ -1294,7 +1321,7 @@ figure.effect-lily a:hover img {
     }
 
     .catg_title {
-        font-size: 12px;
+        //font-size: 12px;
     }
 
     .breadcrumb {
@@ -1528,8 +1555,8 @@ figure.effect-lily a:hover img {
     }
 
     .article_titile {
-        font-size: 14px;
-        line-height: 1.5em;
+        //font-size: 14px;
+        //line-height: 1.5em;
     }
 
     .article_category > a {
@@ -1804,13 +1831,21 @@ figure.effect-lily a:hover img {
 }
 
 .slick_slider > .box {
-   border: 1px solid #cccccc;
+    border: 1px solid #cccccc;
+    cursor: pointer;
+    margin: 5px;
+    float: left;
+    // min-height: 10px;
+    border-radius: 5px !important;
+    min-width: 319px;
+    height: 100px;
+    /*border: 1px solid #cccccc;
     cursor: pointer;
     min-height: 100px;
     min-width: 319px;
     height: 94px;
     margin: 5px;
-    position: relative;
+    position: relative;*/
 }
 
 .trimLR {
@@ -1834,31 +1869,29 @@ html.md-default-theme, html, body.md-default-theme, body {
     color: black;
 }
 
-
 .scrollbar {
-    margin-left: 30px;
+    /*margin-left: 30px;
     float: left;
     height: 200px;
-    width: 400px;
+    width: 400px;*/
     background: white;
     overflow-y: scroll;
-    margin-bottom: 2px;
 }
 
 .force-overflow {
-    min-height: 400px;
+    min-height: 117px;
 }
 
 #style-3::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 3px #ddd;
+    -webkit-box-shadow: inset 0 0 8px #808080;
     background-color: white;
 }
 
 #style-3::-webkit-scrollbar {
-    width: 3px;
-    background-color: #ddd;
+    width: 8px;
+    background-color: #808080;
 }
 
 #style-3::-webkit-scrollbar-thumb {
-    background-color: #ddd;
+    background-color: #808080;
 }
