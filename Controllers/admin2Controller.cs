@@ -1,7 +1,10 @@
-﻿using System;
+﻿using ImageProcessor;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Diagnostics;
+using System.Drawing;
+using System.Drawing.Imaging;
 using System.IO;
 using System.Linq;
 using System.Net;
@@ -40,8 +43,11 @@ namespace LiveOdiaFinal.Controllers
                     string fname = "";
                     var streamProvider = new MultipartFormDataStreamProvider(StoragePath);
                     await Request.Content.ReadAsMultipartAsync(streamProvider);
+                    MultipartFileData fdata = null;
                     foreach (MultipartFileData fileData in streamProvider.FileData)
                     {
+                        fdata = fileData;
+
                         if (string.IsNullOrEmpty(fileData.Headers.ContentDisposition.FileName))
                         {
                             return Request.CreateResponse(HttpStatusCode.NotAcceptable, "This request is not properly formatted");
@@ -59,7 +65,10 @@ namespace LiveOdiaFinal.Controllers
                             fname = Path.GetFileName(fileName);
 
                         }
+                        string fpath = Path.Combine(StoragePath, fname);
                         File.Copy(fileData.LocalFileName, Path.Combine(StoragePath, fname));
+                        compressFile(fpath);
+
                     }
                     foreach (var key in streamProvider.FormData.AllKeys)
                     {
@@ -133,6 +142,38 @@ namespace LiveOdiaFinal.Controllers
             //    return Request.CreateErrorResponse(HttpStatusCode.InternalServerError, e);
             //}
         }
+
+        private void compressFile(string fname)
+        {
+
+            byte[] photoBytes = File.ReadAllBytes(fname);
+            int quality = 70;
+            ImageProcessor.Imaging.Formats.ISupportedImageFormat format = new ImageProcessor.Imaging.Formats.JpegFormat();
+            Size size = new Size(1024, 768);
+            using (MemoryStream inStream = new MemoryStream(photoBytes))
+            {
+                using (MemoryStream outStream = new MemoryStream())
+                {
+                    using (ImageFactory imageFactory = new ImageFactory())
+                    {
+                        // Load, resize, set the format and quality and save an image.
+                        imageFactory.Load(inStream)
+                                    .Resize(size)
+                                    .Format(format)
+                                    .Quality(quality)
+                                    .Save(outStream)
+                                    .Resolution(100,100);
+                        FileStream file = new FileStream(fname, FileMode.Create, FileAccess.Write);
+                        outStream.WriteTo(file);
+                        file.Close();
+                        outStream.Close();
+                    }
+
+                    // Do something with the stream.
+                }
+            }
+        }
+
         // PUT: api/admin2/5
         public void Put(int id, [FromBody]string value)
         {
